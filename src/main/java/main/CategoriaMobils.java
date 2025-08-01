@@ -31,6 +31,9 @@ public class CategoriaMobils {
 		if (isAssinatura(descLower, categoriaLower)) {
 			return CATEGORIA_ASSINATURAS;
 		}
+		if (isViagem(descLower, categoriaLower)) {
+			return CATEGORIA_VIAGEM;
+		}
 		if (isGames(descLower)) {
 			return CATEGORIA_GAMES;
 		}
@@ -70,9 +73,6 @@ public class CategoriaMobils {
 		if (isSaude(descLower, categoriaLower)) {
 			return CATEGORIA_SAUDE;
 		}
-		if (isViagem(descLower, categoriaLower)) {
-			return CATEGORIA_VIAGEM;
-		}
 		if (isComprasOnline(descLower)) {
 			return CATEGORIA_COMPRAS_ONLINE;
 		}
@@ -87,25 +87,30 @@ public class CategoriaMobils {
 	private static boolean isAssinatura(String descLower, String categoria) {
 		return descLower.contains("crunchyroll") || 
 				descLower.contains("netflix") ||
-				descLower.contains("tim*giga") ||
+				descLower.contains("tim*") ||
 				descLower.contains("google viki") ||
 				descLower.contains("google storage") ||
 				descLower.contains("google viki") ||
+				descLower.contains("google youtube") ||
 				descLower.contains("youtubepremium") ||
 				descLower.contains("amazon music") ||
 				descLower.contains("amazon prime") ||
 				descLower.contains("nespresso") ||
-				categoria.contains("assinatura");
+				descLower.contains("google one") ||
+				categoria.contains("assinatura") ||
+				categoria.contains("serviços de telecomunicações");
 		
 	}
 	
 	private static boolean isCasaFixo(String descLower) {
-		return false;
+		return descLower.contains("credpago");
 	}
 	
 	private static boolean isCasaCoisas(String descLower, String categoria) {
 		return categoria.contains("construção") ||
-				categoria.contains("consertos em geral") || 
+				categoria.contains("consertos em geral") ||
+				categoria.contains("escritório mobiliário") ||
+				categoria.contains("elétrico") ||
 				descLower.contains("intelbras");
 				
 	}
@@ -129,7 +134,9 @@ public class CategoriaMobils {
 				descLower.contains("notebooks") ||
 				categoria.contains("pessoais") ||
 				categoria.contains("roupas") ||
-				categoria.contains("departamento / desconto")
+				categoria.contains("departamento / desconto") ||
+				categoria.contains("antigos / peão lojas") ||
+				categoria.contains("varejo")
 		|| descLower.contains("sheincom");
 	}
 	
@@ -145,15 +152,17 @@ public class CategoriaMobils {
 				descLower.contains("pet love") ||
 				descLower.contains("puro encanto") ||
 				descLower.contains("cao.com") ||
+				descLower.contains("santa vida") ||
 				descLower.contains("finpet");
 	}
 	
 	private static boolean isPresentes(String descLower) {
-		return false;
+		return descLower.contains("ri happy");
 	}
 	
 	private static boolean isRestaurante(String descLower, String categoria) {
 		return categoria.contains("restaurante") ||
+				descLower.contains("gelateria") ||
 				descLower.contains("ifood");
 	}
 	
@@ -169,18 +178,27 @@ public class CategoriaMobils {
 				descLower.contains("whoosh") ||
 				descLower.contains("uber") ||
 				descLower.contains("est villa romana") ||
+				descLower.contains("limpme") ||
 				categoria.contains("transporte") ||
 				categoria.contains("automotivo");
 	}
 	
 	private static boolean isViagem(String descLower, String categoria) {
 		return descLower.contains("enotel") || 
-				categoria.contains("t&e");
+				categoria.contains("t&e") ||
+				descLower.contains("cvc") ||
+				descLower.contains("getyourguide") ||
+				descLower.contains("booking.com") ||
+				descLower.contains("cars on booking") ||
+				descLower.contains("disneyland") ||
+				descLower.contains("ush"); //universal studios hollywood
 	}
 
 	private static boolean isComprasOnline(String descLower) {
 		return descLower.contains("mercadolivre") ||
 				descLower.contains("mercado*") ||
+				descLower.contains("mp *") ||
+				descLower.contains("mercadopago") ||
 				descLower.contains("amazon");
 	}
 	

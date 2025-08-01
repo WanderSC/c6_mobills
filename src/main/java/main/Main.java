@@ -11,7 +11,7 @@ import com.opencsv.CSVWriter;
 
 public class Main {
 
-	private static final String INPUT_PATH = "D:\\fatura\\Fatura_2024-05-05.csv";
+	private static final String INPUT_PATH = "D:\\fatura\\Fatura_2025-08-05.csv";
 	private static final String OUTPUT_PATH = "D:\\fatura\\Fatura_convertida_mobils.csv";
 
 	public static void main(String[] args) throws IOException {
