@@ -126,6 +126,7 @@ public class CategoriaMobils {
 	private static boolean isGames(String descLower) {
 		return descLower.contains("steam") || 
 				descLower.contains("nuuvem") ||
+				descLower.contains("oculus") ||
 				descLower.contains("blizzard");
 	}
 	
@@ -136,6 +137,7 @@ public class CategoriaMobils {
 				categoria.contains("roupas") ||
 				categoria.contains("departamento / desconto") ||
 				categoria.contains("antigos / peão lojas") ||
+				categoria.contains("arte / artesanato / passatempo") ||
 				categoria.contains("varejo")
 		|| descLower.contains("sheincom");
 	}
@@ -163,7 +165,8 @@ public class CategoriaMobils {
 	private static boolean isRestaurante(String descLower, String categoria) {
 		return categoria.contains("restaurante") ||
 				descLower.contains("gelateria") ||
-				descLower.contains("ifood");
+				descLower.contains("ifood") ||
+				descLower.contains("mais delivery");
 	}
 	
 	private static boolean isSaude(String descLower, String categoriaLower) {
