@@ -81,11 +81,13 @@ public class CategoriaMobils {
 	
 	private static boolean isSupermercado(String descLower, String categoria) {
 		return descLower.contains("angeloni") ||
+				descLower.contains("supermercados") ||
 				categoria.contains("supermercados");
 	}
 	
 	private static boolean isAssinatura(String descLower, String categoria) {
 		return descLower.contains("crunchyroll") || 
+				descLower.contains("melimais") ||
 				descLower.contains("netflix") ||
 				descLower.contains("tim*") ||
 				descLower.contains("google viki") ||
@@ -152,6 +154,7 @@ public class CategoriaMobils {
 		return descLower.contains("petlove") ||
 				descLower.contains("petshop") ||
 				descLower.contains("pet love") ||
+				descLower.contains("vital vet") ||
 				descLower.contains("puro encanto") ||
 				descLower.contains("cao.com") ||
 				descLower.contains("santa vida") ||
