@@ -82,6 +82,7 @@ public class CategoriaMobils {
 	private static boolean isSupermercado(String descLower, String categoria) {
 		return descLower.contains("angeloni") ||
 				descLower.contains("supermercados") ||
+				descLower.contains("atacadista") ||
 				categoria.contains("supermercados");
 	}
 	

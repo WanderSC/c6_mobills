@@ -11,8 +11,8 @@ import com.opencsv.CSVWriter;
 
 public class Main {
 
-	private static final String INPUT_PATH = "D:\\fatura\\Fatura_2026-01-05.csv";
-	private static final String OUTPUT_PATH = "D:\\fatura\\Fatura_convertida_mobils.csv";
+	private static final String INPUT_PATH = "C:\\Users\\wande\\OneDrive\\Documentos\\fatura\\Fatura_2026-02-05.csv";
+	private static final String OUTPUT_PATH = "C:\\Users\\wande\\OneDrive\\Documentos\\fatura\\Fatura_convertida_mobils.csv";
 
 	public static void main(String[] args) throws IOException {
 		List<FaturaC6> listaFaturasC6 = readCSVC6();
