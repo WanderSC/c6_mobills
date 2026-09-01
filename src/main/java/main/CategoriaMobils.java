@@ -83,23 +83,22 @@ public class CategoriaMobils {
 		return descLower.contains("angeloni") ||
 				descLower.contains("supermercados") ||
 				descLower.contains("atacadista") ||
+				descLower.contains("komprao") ||
 				categoria.contains("supermercados");
 	}
 	
 	private static boolean isAssinatura(String descLower, String categoria) {
 		return descLower.contains("crunchyroll") || 
-				descLower.contains("melimais") ||
+				descLower.contains("melimais") ||				
 				descLower.contains("netflix") ||
 				descLower.contains("tim*") ||
-				descLower.contains("google viki") ||
-				descLower.contains("google storage") ||
-				descLower.contains("google viki") ||
-				descLower.contains("google youtube") ||
+				descLower.contains("google") ||
 				descLower.contains("youtubepremium") ||
 				descLower.contains("amazon music") ||
 				descLower.contains("amazon prime") ||
 				descLower.contains("nespresso") ||
 				descLower.contains("google one") ||
+				descLower.contains("linkedin") ||
 				categoria.contains("assinatura") ||
 				categoria.contains("serviços de telecomunicações");
 		
@@ -130,12 +129,16 @@ public class CategoriaMobils {
 		return descLower.contains("steam") || 
 				descLower.contains("nuuvem") ||
 				descLower.contains("oculus") ||
+				descLower.contains("gamer") ||
+				descLower.contains("playstation") ||
+				descLower.contains("nintendo") ||
 				descLower.contains("blizzard");
 	}
 	
 	private static boolean isPessoal(String descLower, String categoria) {
 		return descLower.contains("barbearia") ||
 				descLower.contains("notebooks") ||
+				descLower.contains("ceramica") ||
 				categoria.contains("pessoais") ||
 				categoria.contains("roupas") ||
 				categoria.contains("departamento / desconto") ||
@@ -148,6 +151,7 @@ public class CategoriaMobils {
 	private static boolean isLazer(String descLower, String categoria) {
 		return descLower.contains("ingresso") || 
 				categoria.contains("entretenimento") ||
+				descLower.contains("mc tenis") ||
 				categoria.contains("recreativo");
 	}
 	
@@ -170,6 +174,8 @@ public class CategoriaMobils {
 		return categoria.contains("restaurante") ||
 				descLower.contains("gelateria") ||
 				descLower.contains("ifood") ||
+				descLower.contains("doces") ||
+				descLower.contains("pasteis") ||
 				descLower.contains("mais delivery");
 	}
 	
@@ -186,6 +192,7 @@ public class CategoriaMobils {
 				descLower.contains("uber") ||
 				descLower.contains("est villa romana") ||
 				descLower.contains("limpme") ||
+				descLower.contains("lava rapido") ||
 				categoria.contains("transporte") ||
 				categoria.contains("automotivo");
 	}
@@ -206,6 +213,8 @@ public class CategoriaMobils {
 				descLower.contains("mercado*") ||
 				descLower.contains("mp *") ||
 				descLower.contains("mercadopago") ||
+				descLower.contains("shopee") ||
+				descLower.contains("vibeshort") ||
 				descLower.contains("amazon");
 	}
 	
