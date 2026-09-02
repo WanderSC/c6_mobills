@@ -20,14 +20,10 @@ public class CategoriaMobils {
 	private static final String CATEGORIA_VIAGEM = "Viagem";
 	private static final String CATEGORIA_COMPRAS_ONLINE = "Compras Online";
 	private static final String CATEGORIA_OUTROS = "Outros";
-	public static final String CATEGORIA_IGNORAR = "Ignorar";
-	
+
 	public static String getCategoriaC6(FaturaC6 faturaC6) {
 		String descLower = faturaC6.getDescricao().toLowerCase();
 		String categoriaLower  = faturaC6.getCategoria().toLowerCase();
-		if (isIgnorar(descLower)) {
-			return CATEGORIA_IGNORAR;
-		}
 		if (isAssinatura(descLower, categoriaLower)) {
 			return CATEGORIA_ASSINATURAS;
 		}
@@ -216,12 +212,6 @@ public class CategoriaMobils {
 				descLower.contains("shopee") ||
 				descLower.contains("vibeshort") ||
 				descLower.contains("amazon");
-	}
-	
-	private static boolean isIgnorar(String descLower) {
-		return descLower.contains("pagamento fatura") ||
-				descLower.contains("estorno") ||
-				descLower.contains("anuidade");
 	}
 	
 }

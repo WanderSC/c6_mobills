@@ -10,9 +10,20 @@ public class FaturaMobils {
 	public FaturaMobils(FaturaC6 faturaC6) {
 		this.data = faturaC6.getDataDeCompra();
 		this.descricao = faturaC6.getDescricao();
-		this.valor = faturaC6.getValorRS();
+		this.valor = inverterSinal(faturaC6.getValorRS());
 		this.conta = faturaC6.getNomeDoCartao();
 		this.categoria = CategoriaMobils.getCategoriaC6(faturaC6);
+	}
+
+	private static String inverterSinal(String valorC6) {
+		String valor = valorC6.trim();
+		if (valor.startsWith("-")) {
+			return valor.substring(1);
+		}
+		if (valor.startsWith("+")) {
+			valor = valor.substring(1);
+		}
+		return "-" + valor;
 	}
 	
 	public String getData() {
